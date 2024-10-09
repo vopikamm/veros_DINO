@@ -288,6 +288,7 @@ def check_isoneutral_slope_crit(state):
         )
         delta1b = npx.min(vs.dyt[npx.newaxis, 2:-2, npx.newaxis] * vs.dzt[npx.newaxis, npx.newaxis, :] * ft1)
         delta_iso1 = min(vs.dzt[0] * ft1 * vs.dxt[-1] * abs(vs.cost[-1]), min(delta1a, delta1b))
+        print('vs.dzt[0]', vs.dzt[0], 'ft1', ft1, 'vs.dxt[-1]', vs.dxt[-1], 'abs(vs.cost[-1])', abs(vs.cost[-1]), 'delta1a', delta1a, 'delta1b', delta1b)
 
         logger.info("Diffusion grid factor delta_iso1 = {}", float(delta_iso1))
         if delta_iso1 < settings.iso_slopec:
