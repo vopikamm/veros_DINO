@@ -19,6 +19,10 @@ SETTINGS = {
     "identifier": Setting("UNNAMED", str, "Identifier of the current simulation"),
     "description": Setting("", str, "Description of the current simulation"),
     # Model parameters
+    # DINO specific parameters
+    "Lx": Setting(140.0, float, "Domain width in zonal (x) direction"),
+    "Ly": Setting(50.0, float, " (Approximate) Domain width in meridional (y) direction"),
+    "dxy": Setting(1.0, float, "Horizontal resolution in the mercator projection"),
     "nx": Setting(0, int, "Grid points in zonal (x) direction"),
     "ny": Setting(0, int, "Grid points in meridional (y,j) direction"),
     "nz": Setting(0, int, "Grid points in vertical (z,k) direction"),
